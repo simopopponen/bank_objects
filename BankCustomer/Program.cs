@@ -9,7 +9,7 @@ namespace BankCustomer
         static void Main(string[] args)
         {
             //This code is based to Ville Arola's code!!! I just tried to understand what has been done....
-            //This has been hard for me to understand because the data is stored to memory not in database... :)
+            //This has been hard for me to understand because the data is stored to memory not in database or txt -file etc... :)
             Bank bnk = new Bank("Ankallispankki");
             List<Customer> customers = new List<Customer>();
 
