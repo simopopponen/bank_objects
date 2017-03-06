@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankCustomer
 {
-    class Customer
+    public class Customer
     {
         private string _firstname;
         private string _lastname;
@@ -32,14 +32,22 @@ namespace BankCustomer
 
         public override string ToString()
         {
-            return "Blaah";
+            return string.Format("{0} {1}\t({2})", _firstname, _lastname, _accountnumber);
         }
 
         public string Createaccountnumber()
         {
-            Bank bnk = new Bank();
-            _accountnumber = bnk.Createnewaccount();       
+            Bank bnk = new Bank("Ankallispankki");
+            _accountnumber = bnk.CreateAccountNumber();       
             return _accountnumber;
         }
-    }
+
+        public Customer(string firstname, string lastname, string accountnumber)
+        {
+            _firstname = firstname;
+            _lastname = lastname;
+            _accountnumber = accountnumber;
+
+        }
+}
 }
